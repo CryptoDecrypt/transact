@@ -4,105 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decrypting the Wallet</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+    }
 
-        header {
-            width: 100%;
-            background-color: #1e1e1e;
-            border-bottom: 1px solid green;
-            text-align: center;
-            padding: 15px 0;
-        }
+    header {
+        width: 100%;
+        background-color: #1e1e1e;
+        border-bottom: 1px solid green;
+        text-align: center;
+        padding: 15px 0;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
 
-        .container {
-            width: 70%;
-            padding: 20px;
-            border: 1.5px solid green;
-            border-radius: 10px;
-            background-color: #1e1e1e;
-            text-align: center;
-            margin-top: 20px;
-        }
+    .container {
+        width: 70%;
+        padding: 20px;
+        border: 1.5px solid green;
+        border-radius: 10px;
+        background-color: #1e1e1e;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-        form {
-            margin: 20px auto;
-            max-width: 400px;
-        }
+    form {
+        margin: 20px auto;
+        max-width: 400px;
+    }
 
-        label {
-            display: block;
-            text-align: left;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
+    label {
+        display: block;
+        text-align: left;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
 
-        input, select, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: none;
-            background: #333;
-            color: #fff;
-        }
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        background: #333;
+        color: #fff;
+    }
 
-        button {
-            background: #28a745;
-            cursor: pointer;
-        }
+    button {
+        background: #28a745;
+        cursor: pointer;
+    }
 
-        button:hover {
-            background: #218838;
-        }
+    button:hover {
+        background: #218838;
+    }
 
-        .progress-container {
-            width: 90%;
-            margin: 20px auto;
-        }
+    .progress-container {
+        width: 90%;
+        margin: 20px auto;
+    }
 
-        .progress-bar {
-            width: 0;
-            height: 25px;
-            background-color: #28a745;
-            text-align: center;
-            line-height: 25px;
-            color: white;
-            border-radius: 5px;
-        }
+    .progress-bar {
+        width: 0;
+        height: 25px;
+        background-color: #28a745;
+        text-align: center;
+        line-height: 25px;
+        color: white;
+        border-radius: 5px;
+    }
 
-        .logs-image {
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
+    .logs-image {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
 
-        h2, h3 {
-            margin-top: 20px;
-        }
+    h2, h3 {
+        margin-top: 20px;
+    }
 
-        .bold-text {
-            font-weight: bold;
-            font-size: 24px;
-        }
-    </style>
+    .bold-text {
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+#walletDisplay, #secondWalletDisplay {
+    word-wrap: break-word; /* Break long words onto the next line */
+    overflow-wrap: break-word; /* Compatibility for older browsers */
+    word-break: break-all; /* Forces breaks for very long strings */
+    text-align: center; /* Center-align the text */
+    margin: 10px 0;
+}
+
+</style>
+
 </head>
 <body>
     <!-- Header -->
