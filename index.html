@@ -148,14 +148,18 @@
 
     <!-- Second Page -->
     <div id="resultPage" class="container" style="display: none;">
-        <iframe 
-        src="https://www.youtube.com/embed/XrsZtobLcSo?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1" 
-        width="100%" 
-        height="300" 
-        frameborder="0" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-    </iframe>
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/73bmgm7tzq.js" async type="module"></script>
+<style>
+    wistia-player[media-id='73bmgm7tzq']:not(:defined) {
+        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/73bmgm7tzq/swatch');
+        display: block;
+        filter: blur(5px);
+        padding-top: 57.29%;
+    }
+</style>
+<wistia-player media-id="73bmgm7tzq"></wistia-player>
+
 
         <p id="decryptingText">Decrypting</p>
         <h3>Wallet Address</h3>
